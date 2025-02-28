@@ -23,7 +23,6 @@ public class Main {
         electronics.add(ele2);
         electronics.add(ele3);
         electronics.add(ele1);
-
         electronics.display();
         traditionals.add(tra4);
         traditionals.add(tra3);
@@ -33,23 +32,20 @@ public class Main {
         traditionals.display();
         System.out.printf("====================================\n\n");
 
-        // Editing data demo
+        // Editing data demo: update the price of bass, update stock of violin
         System.out.printf("========= editing data demo ========\n");
-        // Update the price of bass
         System.out.println("before: " + electronics.getItem(3));
         Electronic updateBass = new Electronic("E004", "bass", "string", "$250", 7);
         electronics.setItem(ele3, updateBass);
         System.out.println("after:  " + electronics.getItem(3));
-        // Update stock of violin
         System.out.println("before: " + traditionals.getItem(3));
         Traditional updateViolin = new Traditional("T004", "violin", "string", "$410", 0);
         traditionals.setItem(tra3, updateViolin);
         System.out.println("after:  " + traditionals.getItem(3));
         System.out.printf("====================================\n\n");
 
-        // Deleting data demo
+        // Deleting data demo: remove piano and harp
         System.out.printf("======== deleting data demo ========\n");
-        // remove piano and harp
         System.out.printf("before:\n");
         electronics.display();
         traditionals.display();
