@@ -36,11 +36,11 @@ public class Electronic {
     @Override
     public String toString() {
         return "Electronic [" +
-                " id: " + id +
-                " name: " + name +
-                " category: " + category +
-                " price: " + price +
-                " stock: " + stock +
+                " id:" + id +
+                " name:" + name +
+                " category:" + category +
+                " price:" + price +
+                " stock:" + stock +
                 "]";
     }
 }

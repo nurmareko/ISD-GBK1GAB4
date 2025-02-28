@@ -32,4 +32,15 @@ public class Traditional {
     public int getStock() {
         return stock;
     }
+
+    @Override
+    public String toString() {
+        return "Traditional [" +
+                " id:" + id +
+                " name:" + name +
+                " category:" + category +
+                " price:" + price +
+                " stock:" + stock +
+                "]";
+    }
 }
