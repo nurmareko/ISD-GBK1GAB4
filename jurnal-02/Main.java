@@ -50,5 +50,18 @@ public class Main {
         traditionals.setItem(tra3, updateViolin);
         System.out.println("after:  " + traditionals.getItem(3));
         System.out.printf("====================================\n\n");
+
+        // Deleting data demo
+        System.out.printf("======== deleting data demo ========\n");
+        // remove piano and harp
+        System.out.printf("before:\n");
+        electronics.display();
+        traditionals.display();
+        System.out.printf("after:\n");
+        electronics.removeItem(ele1);
+        traditionals.removeItem(tra1);
+        electronics.display();
+        traditionals.display();
+        System.out.printf("====================================\n\n");
     }
 }
