@@ -32,4 +32,15 @@ public class Electronic {
     public int getStock() {
         return stock;
     }
+
+    @Override
+    public String toString() {
+        return "Electronic [" +
+                " id: " + id +
+                " name: " + name +
+                " category: " + category +
+                " price: " + price +
+                " stock: " + stock +
+                "]";
+    }
 }
