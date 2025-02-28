@@ -1,3 +1,4 @@
+import java.net.IDN;
 import java.util.ArrayList;
 
 public class Inventory<E> {
@@ -23,6 +24,10 @@ public class Inventory<E> {
 
     public void setItem(E oldData, E newData) {
         int index = inventory.indexOf(oldData);
-        inventory.add(index, newData);
+        inventory.set(index, newData);
+    }
+
+    public void removeItem(E item) {
+        inventory.remove(item);
     }
 }
