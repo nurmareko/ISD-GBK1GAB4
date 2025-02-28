@@ -1,4 +1,4 @@
-public class Traditional {
+public class Traditional implements Comparable<Traditional> {
     private String id;
     private String name;
     private String category;
@@ -42,5 +42,10 @@ public class Traditional {
                 " price:" + price +
                 " stock:" + stock +
                 "]";
+    }
+
+    @Override
+    public int compareTo(Traditional o) {
+        return this.getId().compareTo(o.getId());
     }
 }

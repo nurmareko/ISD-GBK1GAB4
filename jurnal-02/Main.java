@@ -24,16 +24,17 @@ public class Main {
         // Input data demo
         System.out.printf("========== input data demo =========\n");
         electronics.add(ele0);
-        electronics.add(ele1);
+        electronics.add(ele4);
         electronics.add(ele2);
         electronics.add(ele3);
-        electronics.add(ele4);
+        electronics.add(ele1);
+
         electronics.display();
-        traditionals.add(tra0);
-        traditionals.add(tra1);
-        traditionals.add(tra2);
-        traditionals.add(tra3);
         traditionals.add(tra4);
+        traditionals.add(tra3);
+        traditionals.add(tra2);
+        traditionals.add(tra1);
+        traditionals.add(tra0);
         traditionals.display();
         System.out.printf("====================================\n\n");
 
@@ -62,6 +63,12 @@ public class Main {
         traditionals.removeItem(tra1);
         electronics.display();
         traditionals.display();
+        System.out.printf("====================================\n\n");
+
+        // Display sorted inventory based on product id
+        System.out.printf("========== display sorted ==========\n");
+        electronics.displaySort();
+        traditionals.displaySort();
         System.out.printf("====================================\n\n");
     }
 }

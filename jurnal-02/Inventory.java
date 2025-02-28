@@ -1,7 +1,7 @@
-import java.net.IDN;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class Inventory<E> {
+public class Inventory<E extends Comparable<? super E>> {
     private final ArrayList<E> inventory;
 
     public Inventory() {
@@ -13,6 +13,13 @@ public class Inventory<E> {
     }
 
     public void display() {
+        for (E item : inventory) {
+            System.out.println(item + " ");
+        }
+    }
+
+    public void displaySort() {
+        Collections.sort(inventory);
         for (E item : inventory) {
             System.out.println(item + " ");
         }

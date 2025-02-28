@@ -1,4 +1,4 @@
-public class Electronic {
+public class Electronic implements Comparable<Electronic> {
     private String id;
     private String name;
     private String category;
@@ -42,5 +42,10 @@ public class Electronic {
                 " price:" + price +
                 " stock:" + stock +
                 "]";
+    }
+
+    @Override
+    public int compareTo(Electronic o) {
+        return this.getId().compareTo(o.getId());
     }
 }
