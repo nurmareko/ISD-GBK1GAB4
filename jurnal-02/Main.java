@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.zip.Inflater;
-
-import javax.swing.text.html.parser.Element;
-
 public class Main {
     public static void main(final String[] args) {
         Electronic ele0 = new Electronic("E001", "electric guitar", "string", "$150", 4);
