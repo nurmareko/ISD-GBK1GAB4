@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
+import javax.swing.text.html.parser.Element;
+
 public class Main {
     public static void main(final String[] args) {
         Electronic ele0 = new Electronic("E001", "electric guitar", "string", "$150", 4);
@@ -27,13 +29,26 @@ public class Main {
         electronics.add(ele3);
         electronics.add(ele4);
         electronics.display();
-        System.out.println();
         traditionals.add(tra0);
         traditionals.add(tra1);
         traditionals.add(tra2);
         traditionals.add(tra3);
         traditionals.add(tra4);
         traditionals.display();
-        System.out.printf("====================================\n");
+        System.out.printf("====================================\n\n");
+
+        // Editing data demo
+        System.out.printf("========= editing data demo ========\n");
+        // Update the price of bass
+        System.out.println("before: " + electronics.getItem(3));
+        Electronic updateBass = new Electronic("E004", "bass", "string", "$250", 7);
+        electronics.setItem(ele3, updateBass);
+        System.out.println("after:  " + electronics.getItem(3));
+        // Update stock of violin
+        System.out.println("before: " + traditionals.getItem(3));
+        Traditional updateViolin = new Traditional("T004", "violin", "string", "$410", 0);
+        traditionals.setItem(tra3, updateViolin);
+        System.out.println("after:  " + traditionals.getItem(3));
+        System.out.printf("====================================\n\n");
     }
 }

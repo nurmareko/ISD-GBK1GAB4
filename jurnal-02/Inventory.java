@@ -16,4 +16,13 @@ public class Inventory<E> {
             System.out.println(item + " ");
         }
     }
+
+    public E getItem(int index) {
+        return inventory.get(index);
+    }
+
+    public void setItem(E oldData, E newData) {
+        int index = inventory.indexOf(oldData);
+        inventory.add(index, newData);
+    }
 }
