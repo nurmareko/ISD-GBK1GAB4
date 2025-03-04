@@ -61,6 +61,20 @@ public class Singly<E> {
         System.out.println();
     }
 
+    private String find(String name) {
+        Node<E> current = head;
+
+        while (current != null) {
+            if (current.data instanceof Recipe recipe) {
+                if (recipe.getName().equals(name)) {
+                    return current.data;
+                }
+            }
+            current = current.next
+        }
+        return null;
+    }
+
     private boolean isEmpty() {
         return head == null;
     }
