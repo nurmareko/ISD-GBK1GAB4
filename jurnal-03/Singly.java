@@ -28,6 +28,14 @@ public class Singly<E> {
         }
     }
 
+    public void removeFront() {
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+        }
+    }
+
     public void removeBack() {
         if (head == tail) {
             head = tail = null;
