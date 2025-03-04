@@ -42,4 +42,8 @@ public class Singly<E> {
             current.next = null;
         }
     }
+
+    private boolean isEmpty() {
+        return head == null;
+    }
 }
