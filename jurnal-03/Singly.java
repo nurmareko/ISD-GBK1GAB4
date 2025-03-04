@@ -43,6 +43,16 @@ public class Singly<E> {
         }
     }
 
+    private void print() {
+        Node<E> current = head;
+
+        while (current != null) {
+            System.out.printf("%s ", current.data);
+            current = current.next;
+        }
+        System.out.println();
+    }
+
     private boolean isEmpty() {
         return head == null;
     }
