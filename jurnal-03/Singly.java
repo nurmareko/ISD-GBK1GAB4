@@ -16,4 +16,15 @@ public class Singly<E> {
             head = newNode;
         }
     }
+
+    public void insertBack(E item) {
+        Node newNode = new Node(item);
+
+        if (isEmpty()) {
+            head = tail = new Node<E>(item);
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+    }
 }
