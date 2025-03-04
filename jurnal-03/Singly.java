@@ -27,4 +27,19 @@ public class Singly<E> {
             tail = newNode;
         }
     }
+
+    public void removeBack() {
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            Node<E> current = head;
+
+            while (current.next != tail) {
+                current = current.next;
+            }
+
+            tail = current;
+            current.next = null;
+        }
+    }
 }
