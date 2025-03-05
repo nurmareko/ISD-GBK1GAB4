@@ -70,7 +70,7 @@ public class Singly<E> {
         while (current != null) {
             if (current.data instanceof Recipe) {
                 Recipe recipe = (Recipe) current.data;
-                if (recipe.getName().equals(name)) {
+                if (recipe.getName().toLowerCase().equals(name.toLowerCase())) {
                     System.out.printf("%s: %s\n", this.name, current.data);
                     return;
                 }
