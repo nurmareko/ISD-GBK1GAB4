@@ -8,7 +8,7 @@ public class Singly<E> {
         this.name = name;
     }
 
-    public void insertFront(E item) {
+    public void insertHead(E item) {
         Node<E> newNode = new Node<E>(item);
 
         if (isEmpty()) {
@@ -19,7 +19,7 @@ public class Singly<E> {
         }
     }
 
-    public void insertBack(E item) {
+    public void insertTail(E item) {
         Node<E> newNode = new Node<E>(item);
 
         if (isEmpty()) {
@@ -30,7 +30,7 @@ public class Singly<E> {
         }
     }
 
-    public void removeFront() {
+    public void removeHead() {
         if (head == tail) {
             head = tail = null;
         } else {
@@ -38,7 +38,7 @@ public class Singly<E> {
         }
     }
 
-    public void removeBack() {
+    public void removeTail() {
         if (head == tail) {
             head = tail = null;
         } else {
