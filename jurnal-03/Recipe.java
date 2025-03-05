@@ -1,6 +1,3 @@
-import org.w3c.dom.NameList;
-import org.w3c.dom.css.Rect;
-
 public class Recipe {
     private String name;
     private String mainComponent;
@@ -18,6 +15,6 @@ public class Recipe {
 
     @Override
     public String toString() {
-        return "recipe: " + name + " " + mainComponent + " " + cookingTime + '\n';
+        return "recipe: " + name + " " + mainComponent + " " + cookingTime;
     }
 }
