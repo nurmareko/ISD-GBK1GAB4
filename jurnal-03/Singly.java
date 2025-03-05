@@ -56,12 +56,12 @@ public class Singly<E> {
     public void printAll() {
         Node<E> current = head;
 
-        System.out.printf("=== List: %s ===\n", name);
+        System.out.printf("=============== List: %s ===============\n", name);
         while (current != null) {
             System.out.printf("%s\n", current.data);
             current = current.next;
         }
-        System.out.printf("==== List End ====\n\n");
+        System.out.printf("================= List End ==================\n\n");
     }
 
     public E find(String name) {
