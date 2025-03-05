@@ -64,19 +64,21 @@ public class Singly<E> {
         System.out.printf("================= List End ==================\n\n");
     }
 
-    public E find(String name) {
+    public void find(String name) {
         Node<E> current = head;
 
         while (current != null) {
             if (current.data instanceof Recipe) {
                 Recipe recipe = (Recipe) current.data;
                 if (recipe.getName().equals(name)) {
-                    return current.data;
+                    System.out.printf("%s: %s\n", this.name, current.data);
+                    return;
                 }
             }
             current = current.next;
         }
-        return null;
+        System.out.printf("%s: %s not found :(\n", this.name, name);
+        return;
     }
 
     private boolean isEmpty() {
