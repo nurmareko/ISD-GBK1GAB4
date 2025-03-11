@@ -14,6 +14,7 @@ public class Main {
 
         printAll(books);
         setTitle("86: Run Trough the Battlefront", "9781975303112", books);
+        setHasLoan(true, "9781975303112", books);
         System.out.println("After edit");
         printAll(books);
 
@@ -48,7 +49,16 @@ public class Main {
     }
 
     // Edit book's loan status; return true if successful
-    public static boolean setHasLoan(String isbn) {
+    public static boolean setHasLoan(boolean newHasLoan, String isbn, LinkedList<Book> books) {
+        ListIterator<Book> iterator = books.listIterator();
+
+        while (iterator.hasNext()) {
+            Book current = iterator.next();
+            if (current.getIsbn().equals(isbn)) {
+                current.setHasLoan(newHasLoan);
+                return true;
+            }
+        }
         return false;
     }
 
