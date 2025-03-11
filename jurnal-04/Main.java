@@ -13,6 +13,7 @@ public class Main {
         books.addFirst(new Book("9780671023379", "Man's Search For Meaning", "autobiography", 5.98, false));
 
         printAll(books);
+        printAllReverse(books);
 
     }
 
@@ -41,7 +42,15 @@ public class Main {
     }
 
     // Display all book in a list in reverse order (last entry to fist)
-    public static void printAllReverse() {
+    public static void printAllReverse(LinkedList<Book> books) {
+        ListIterator<Book> iterator = books.listIterator();
 
+        while (iterator.hasNext()) {
+            iterator.next();
+        }
+
+        while (iterator.hasPrevious()) {
+            System.out.println(iterator.previous());
+        }
     }
 }
