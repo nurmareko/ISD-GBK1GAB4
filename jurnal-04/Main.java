@@ -13,9 +13,8 @@ public class Main {
         books.addFirst(new Book("9780671023379", "Man's Search For Meaning", "autobiography", 5.98, false));
 
         printAll(books);
-        removeBook("9780394579153", books);
-        removeBook("xxx", books);
-        System.out.println("After remove");
+        setTitle("86: Run Trough the Battlefront", "9781975303112", books);
+        System.out.println("After edit");
         printAll(books);
 
     }
@@ -35,7 +34,16 @@ public class Main {
     }
 
     // Edit book's title; return true if successful
-    public static boolean setTitle(String isbn) {
+    public static boolean setTitle(String newTitle, String isbn, LinkedList<Book> books) {
+        ListIterator<Book> iterator = books.listIterator();
+
+        while (iterator.hasNext()) {
+            Book current = iterator.next();
+            if (current.getIsbn().equals(isbn)) {
+                current.setTitle(newTitle);
+                return true;
+            }
+        }
         return false;
     }
 
