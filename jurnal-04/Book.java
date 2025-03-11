@@ -14,6 +14,10 @@ public class Book {
         this.hasLoan = hasLoan;
     }
 
+    // Empty book constructor
+    public Book() {
+    }
+
     // Getters and Setters
     public String getIsbn() {
         return isbn;
@@ -47,7 +51,7 @@ public class Book {
         this.price = price;
     }
 
-    public boolean  getHasLoan() {
+    public boolean getHasLoan() {
         return hasLoan;
     }
 
@@ -57,6 +61,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{ISBN=" + isbn + ", title='" + title + "', category='" + category + "', price=" + price + ", hasLoan=" + hasLoan + "}";
+        return "Book{ISBN=" + isbn + ", title='" + title + "', category='" + category + "', price=" + price
+                + ", hasLoan=" + hasLoan + "}";
     }
 }
