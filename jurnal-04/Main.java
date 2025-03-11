@@ -13,12 +13,24 @@ public class Main {
         books.addFirst(new Book("9780671023379", "Man's Search For Meaning", "autobiography", 5.98, false));
 
         printAll(books);
-        printAllReverse(books);
+        removeBook("9780394579153", books);
+        removeBook("xxx", books);
+        System.out.println("After remove");
+        printAll(books);
 
     }
 
     // Remove a book; return true if successful
-    public static boolean removeBook(String isbn) {
+    public static boolean removeBook(String isbn, LinkedList<Book> books) {
+        ListIterator<Book> iterator = books.listIterator();
+
+        while (iterator.hasNext()) {
+            Book current = iterator.next();
+            if (current.getIsbn().equals(isbn)) {
+                iterator.remove();
+                return true;
+            }
+        }
         return false;
     }
 
