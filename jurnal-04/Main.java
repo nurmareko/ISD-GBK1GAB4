@@ -12,12 +12,46 @@ public class Main {
                 new Book("9780140435313", "Flatland: A Romance of Many Dimensions", "science fiction", 13.00, false));
         books.addFirst(new Book("9780671023379", "Man's Search For Meaning", "autobiography", 5.98, false));
 
+        // Display all book
+        System.out.println("Display initial list:");
         printAll(books);
-        setTitle("86: Run Trough the Battlefront", "9781975303112", books);
-        setHasLoan(true, "9781975303112", books);
-        System.out.println("After edit");
-        printAll(books);
+        System.out.println();
 
+        // Add a book to list
+        System.out.println("After adding 'Bumi':");
+        books.add(new Book("9786020301129", "Bumi", "fantasy", 3.00, false));
+        printAll(books);
+        System.out.println();
+
+        // Delete a book from a list
+        System.out.println("After deleting 'Flatland':");
+        removeBook("9780140435313", books);
+        printAll(books);
+        System.out.println();
+
+        // Edit last book
+        System.out.println("Edit the last book; edit title:");
+        ListIterator<Book> iterator = books.listIterator();
+        Book current = new Book();
+        while (iterator.hasNext()) {
+            current = iterator.next();
+        }
+        current.setTitle("Bumi: Tere Lye Series");
+        printAll(books);
+        System.out.println();
+
+        // Edit second to last
+        System.out.println("Edit the second to last book; edit loan status:");
+        current = iterator.previous();
+        current = iterator.previous();
+        current.setHasLoan(true);
+        printAll(books);
+        System.out.println();
+
+        // Display all book in reverse order
+        System.out.println("Display list in reverse order:");
+        printAllReverse(books);
+        System.out.println();
     }
 
     // Remove a book; return true if successful
