@@ -14,21 +14,25 @@ public class Main {
 
         for (int i = 0; i < inputAsChar.length; i++) {
             char c = inputAsChar[i];
+
             if (c == '[' || c == '(' || c == '{') {
                 stack.push(c);
+
             } else if (c == ']' || c == ')' || c == '}') {
                 char leftSide = stack.pop();
-                if (leftSide == '[' && c == ']') {
-                    return true;
-                } else if (leftSide == '(' && c == ')') {
-                    return true;
-                } else if (leftSide == '{' && c == '}') {
-                    return true;
-                } else {
+                boolean checkBracket = leftSide == '(' && c == ')';
+                boolean checkSquare = leftSide == '[' && c == ']';
+                boolean checkCurly = leftSide == '{' && c == '}';
+
+                if (!(checkBracket || checkSquare || checkCurly)) {
                     return false;
                 }
             }
         }
-        return false;
+        if (!stack.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
