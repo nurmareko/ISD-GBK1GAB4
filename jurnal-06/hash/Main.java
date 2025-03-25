@@ -1,14 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        HashSet table = new HashSet(3);
+        HashSet table = new HashSet(5);
 
-        table.add("date");
-        table.add("aiba");
-        table.add("mizuki");
-        table.add("ryuki");
-        table.add("ota");
-        table.add("iris");
-        table.add("tama");
+        table.add("Kiryu");
+        table.add("Majima");
+        table.add("Ichiban");
+        table.add("Haruka");
+        table.add("Saejima");
+        table.add("Daigo");
+        table.add("Akiyama");
+        table.add("Nishikiyama");
+        table.add("Kaoru");
+        table.add("Kashiwagi");
+        table.add("Haruto");
+        table.add("Saeko");
+        table.add("Eri");
+        table.add("Aoki");
 
         System.out.printf("All players\n");
         table.print();
