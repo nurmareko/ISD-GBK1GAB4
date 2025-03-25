@@ -11,6 +11,12 @@ public class Main {
         Player p5 = new Player("Akiyama", 42, "CDM", "6");
         Player[] players = { p1, p2, p3, p4, p5 };
 
+        addElements(players, roster);
+        System.out.println();
+        System.out.println("roster: " + roster);
+    }
+
+    public static void addElements(Player[] players, HashMap<Integer, Player> roster) {
         for (Player player : players) {
             int key = player.hashCode();
             if (roster.containsKey(key)) {
@@ -19,9 +25,6 @@ public class Main {
                 roster.put(key, player);
                 System.out.printf("Adding player successful.\n");
             }
-
         }
-        System.out.println();
-        System.out.println("roster: " + roster);
     }
 }
