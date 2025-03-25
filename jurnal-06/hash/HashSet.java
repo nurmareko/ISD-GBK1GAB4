@@ -51,7 +51,31 @@ public class HashSet {
         for (int i = 0; i < buckets.length; i++) {
             Node iterator = buckets[i];
             if (iterator != null) {
-                System.out.printf("index %d :", i);
+                System.out.printf("Player %d : ", i + 1);
+                while (iterator != null) {
+                    System.out.printf("%s ", iterator.data);
+                    iterator = iterator.next;
+                }
+                System.out.println();
+            }
+        }
+    }
+
+    public void printFirst() {
+        for (int i = 0; i < buckets.length; i++) {
+            Node iterator = buckets[i];
+            if (iterator != null) {
+                System.out.printf("Player %d : %s \n", i + 1, iterator.data);
+            }
+        }
+    }
+
+    public void printRest() {
+        for (int i = 0; i < buckets.length; i++) {
+            Node iterator = buckets[i];
+            if (iterator != null && iterator.next != null) {
+                iterator = iterator.next;
+                System.out.printf("Player %d : ", i + 1);
                 while (iterator != null) {
                     System.out.printf("%s ", iterator.data);
                     iterator = iterator.next;
