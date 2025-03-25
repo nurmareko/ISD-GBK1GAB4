@@ -21,11 +21,11 @@ public class Main {
         table.print();
         System.out.println();
 
-        System.out.printf("Main player\n");
+        System.out.printf("Main players\n");
         table.printFirst();
         System.out.println();
 
-        System.out.printf("Bench player\n");
+        System.out.printf("Bench players\n");
         table.printRest();
     }
 }
