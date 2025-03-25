@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
@@ -11,20 +10,17 @@ public class Main {
         Player p4 = new Player("Majima", 55, "GK", "1");
         Player p5 = new Player("Akiyama", 42, "CDM", "6");
         Player[] players = { p1, p2, p3, p4, p5 };
-        ArrayList<Integer> keys = new ArrayList<>();
 
         for (Player player : players) {
             int key = player.hashCode();
-            if (keys.contains(key)) {
+            if (roster.containsKey(key)) {
                 System.out.printf("Duplicate: %s majima everywhere!!\n", player);
             } else {
                 roster.put(key, player);
-                keys.add(key);
                 System.out.printf("Adding player successful.\n");
             }
 
         }
-
         System.out.println();
         System.out.println("roster: " + roster);
     }
