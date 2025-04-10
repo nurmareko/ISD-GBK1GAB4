@@ -26,6 +26,12 @@ public class Patients {
 
     public void call() {
         Patient called = patients.poll();
+
+        if (called == null) {
+            System.out.printf("Queue empty.");
+            return;
+        }
+
         System.out.printf("%s, with queue number %s", called.getName(), called.getTicket());
         System.out.printf(" for %s, %s", called.getDoctor(), called.getSpeciality());
         System.out.printf(" patient, please go to the examination room.\n");
