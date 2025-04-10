@@ -1,8 +1,8 @@
 public class Patient {
-    String ticket;
-    String name;
-    String doctor;
-    String speciality;
+    private String ticket;
+    private String name;
+    private String doctor;
+    private String speciality;
 
     public Patient(String ticket, String name, String doctor, String speciality) {
         this.ticket = ticket;
