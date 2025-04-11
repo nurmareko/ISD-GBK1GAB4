@@ -21,11 +21,21 @@ public class Members {
     }
 
     public void find(String name) {
-
+        for (Member member : members) {
+            if (member.getName().equals(name)) {
+                System.out.println(member);
+                return;
+            }
+        }
+        System.out.println("Member not found.");
     }
 
     public void filter(int year) {
-
+        for (Member member : members) {
+            if (member.getYear() >= year) {
+                System.out.println(member);
+            }
+        }
     }
 
     public void all() {
