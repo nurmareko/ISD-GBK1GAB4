@@ -12,4 +12,9 @@ public class Member {
         this.type = type;
         this.year = year;
     }
+
+    @Override
+    public String toString() {
+        return "{" + phone + " " + name + " " + address + " " + type + " " + year + "}";
+    }
 }
