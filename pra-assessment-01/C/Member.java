@@ -13,6 +13,10 @@ public class Member {
         this.year = year;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "{" + phone + " " + name + " " + address + " " + type + " " + year + "}";
