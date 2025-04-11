@@ -17,6 +17,10 @@ public class Member {
         return name;
     }
 
+    public int getYear() {
+        return year;
+    }
+
     @Override
     public String toString() {
         return "{" + phone + " " + name + " " + address + " " + type + " " + year + "}";
