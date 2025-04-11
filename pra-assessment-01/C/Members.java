@@ -12,7 +12,12 @@ public class Members {
     }
 
     public void remove(String name) {
-
+        for (Member member : members) {
+            if (member.getName().equals(name)) {
+                members.remove(member);
+                break;
+            }
+        }
     }
 
     public void find(String name) {
