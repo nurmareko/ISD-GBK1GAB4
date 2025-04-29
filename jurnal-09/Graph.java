@@ -59,7 +59,7 @@ public class Graph {
             // Add current vertex to result
             result.add(current_vertex);
 
-            // Add current vertex valid neighbors to queue
+            // Add current vertex valid neighbors to stack
             for (char neighbor : adjacencyList.get(current_vertex)) {
                 if (!visited.contains(neighbor)) {
                     stack.push(neighbor);
