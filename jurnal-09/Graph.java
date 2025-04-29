@@ -46,6 +46,32 @@ public class Graph {
     }
 
     public void depthFirstSearch(char origin) {
+        Stack<Character> stack = new Stack<>();
+        ArrayList<Character> visited = new ArrayList<>();
+        ArrayList<Character> result = new ArrayList<>();
 
+        stack.push(origin);
+        visited.add(origin);
+
+        while (!stack.isEmpty()) {
+            char current_vertex = stack.pop();
+
+            // Add current vertex to result
+            result.add(current_vertex);
+
+            // Add current vertex valid neighbors to queue
+            for (char neighbor : adjacencyList.get(current_vertex)) {
+                if (!visited.contains(neighbor)) {
+                    stack.push(neighbor);
+                    visited.add(neighbor);
+                }
+            }
+        }
+
+        System.out.printf("Depth-First Search Path:\n");
+        for (char node : result) {
+            System.out.printf("%c ", node);
+        }
+        System.out.println();
     }
 }
