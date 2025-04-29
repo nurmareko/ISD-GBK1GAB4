@@ -1,20 +1,42 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Stack;
+import java.util.Queue;
 
 public class Graph {
-    private HashMap<Character, ArrayList<Character>> AdjacencyList;
+    private HashMap<Character, ArrayList<Character>> adjacencyList;
 
     public Graph() {
-        AdjacencyList = new HashMap<>();
+        adjacencyList = new HashMap<>();
     }
 
     public void addNode(char node, ArrayList<Character> neigbors) {
-        AdjacencyList.put(node, neigbors);
+        adjacencyList.put(node, neigbors);
     }
 
     public void breadthFirstSearch(char origin) {
-        // ArrayList<Character> result = new ArrayList<>(Arrays.asList('A', 'B', 'C'));
+        Queue<Character> queue = new LinkedList<>();
+        ArrayList<Character> visited = new ArrayList<>();
+        ArrayList<Character> result = new ArrayList<>();
+
+        queue.offer(origin);
+        visited.add(origin);
+
+        while (!queue.isEmpty()) {
+            char current_vertex = queue.poll();
+
+            // Add current vertex to result
+            result.add(current_vertex);
+
+            // Add current vertex valid neighbors to queue
+            for (char neighbor : adjacencyList.get(current_vertex)) {
+                if (!visited.contains(neighbor)) {
+                    queue.offer(neighbor);
+                    visited.add(neighbor);
+                }
+            }
+        }
 
         System.out.printf("Breath-First Search Path:\n");
         for (char node : result) {
@@ -23,7 +45,7 @@ public class Graph {
         System.out.println();
     }
 
-    public void DepthFirstSearch() {
+    public void depthFirstSearch(char origin) {
 
     }
 }
