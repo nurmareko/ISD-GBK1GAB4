@@ -15,5 +15,7 @@ public class Main {
         graph.addNode('H', new ArrayList<>(Arrays.asList('A')));
 
         graph.breadthFirstSearch('A');
+        System.out.println();
+        graph.depthFirstSearch('A');
     }
 }
