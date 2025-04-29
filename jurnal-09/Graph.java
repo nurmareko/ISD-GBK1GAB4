@@ -24,13 +24,13 @@ public class Graph {
         visited.add(origin);
 
         while (!queue.isEmpty()) {
-            char current_vertex = queue.poll();
+            char current_node = queue.poll();
 
-            // Add current vertex to result
-            result.add(current_vertex);
+            // Add current node to result
+            result.add(current_node);
 
-            // Add current vertex valid neighbors to queue
-            for (char neighbor : adjacencyList.get(current_vertex)) {
+            // Add current node valid neighbors to queue
+            for (char neighbor : adjacencyList.get(current_node)) {
                 if (!visited.contains(neighbor)) {
                     queue.offer(neighbor);
                     visited.add(neighbor);
@@ -54,13 +54,13 @@ public class Graph {
         visited.add(origin);
 
         while (!stack.isEmpty()) {
-            char current_vertex = stack.pop();
+            char current_node = stack.pop();
 
-            // Add current vertex to result
-            result.add(current_vertex);
+            // Add current node to result
+            result.add(current_node);
 
-            // Add current vertex valid neighbors to stack
-            for (char neighbor : adjacencyList.get(current_vertex)) {
+            // Add current node valid neighbors to stack
+            for (char neighbor : adjacencyList.get(current_node)) {
                 if (!visited.contains(neighbor)) {
                     stack.push(neighbor);
                     visited.add(neighbor);
